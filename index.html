@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Students</title>
+</head>
+<body>
+  <h1>Students</h1>
+
+  <!-- GET /students -->
+  <section>
+    <h2>List All Students</h2>
+    <form action="/students" method="get">
+      <button type="submit">List students</button>
+    </form>
+  </section>
+
+  <hr />
+
+  <!-- POST /students -->
+  <section>
+    <h2>Add Student</h2>
+    <form action="/students" method="post">
+      <label>First name:
+        <input name="first_name" required />
+      </label>
+      <br />
+      <label>Last name:
+        <input name="last_name" required />
+      </label>
+      <br />
+      <label>Email:
+        <input name="email" type="email" required />
+      </label>
+      <br />
+      <label>Enrollment date (YYYY-MM-DD, optional):
+        <input name="enrollment_date" placeholder="2023-09-01" />
+      </label>
+      <br />
+      <button type="submit">Add Student</button>
+    </form>
+  </section>
+
+  <hr />
+
+  <!-- POST /students/email -->
+  <section>
+    <h2>Update Student Email</h2>
+    <form action="/students/email" method="post">
+      <input type="hidden" name="_method" value="PUT" />
+      <label>Student ID:
+        <input name="id" inputmode="numeric" required />
+      </label>
+      <br />
+      <label>New Email:
+        <input name="email" type="email" required />
+      </label>
+      <br />
+      <button type="submit">Update Email</button>
+    </form>
+  </section>
+
+  <hr />
+
+  <!-- POST /students/delete -->
+  <section>
+    <h2>Delete Student</h2>
+    <form action="/students/delete" method="post">
+      <input type="hidden" name="_method" value="DELETE" />
+      <label>Student ID:
+        <input name="id" inputmode="numeric" required />
+      </label>
+      <br />
+      <button type="submit">Delete</button>
+    </form>
+  </section>
+</body>
+</html>
