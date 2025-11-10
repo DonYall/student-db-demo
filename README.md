@@ -12,3 +12,6 @@ Note: This application is written to run with a postgres server set up on port 5
 `node server.js`
 
 Test it on `https://localhost:3000`
+
+# Video demonstration
+https://youtu.be/C1cTWvMxHPc
